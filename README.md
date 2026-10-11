@@ -4,9 +4,9 @@ Three independent implementations of Sections A, B and C from the supplied brief
 
 ## Projects
 
-- `qa/` — Playwright + TypeScript UI and API tests. `cd qa && npm install && npx playwright install chromium && npm test`. ReqRes uses `REQRES_API_KEY` from the free account described at reqres.in; set it in the environment before running API tests.
-- `backend/` — Java 17 / Spring Boot recruiter matching API with MySQL and raw JDBC SQL. Create a `recruiter_bot` database (or set `DB_URL`), configure `DB_USERNAME` and `DB_PASSWORD`, then `cd backend && mvn spring-boot:run`. The API seeds its fictional candidates and jobs on startup. Run the separate SQL challenge using `backend/sql_detective.sql`.
-- `frontend/` — Vite, React, Redux Toolkit, React Router and strict TypeScript. `cd frontend && npm install && npm run dev`.
+- [Section A: QA Automation](qa/README.md) — Playwright + TypeScript UI and API tests. From `qa/`, run `npm install`, `npx playwright install chromium`, then `npm test`. ReqRes uses `REQRES_API_KEY`; set it in the environment before running API tests.
+- [Section B: Build-a-Recruiter-Bot](backend/README.md) — Java 17 / Spring Boot recruiter matching API with MySQL and raw JDBC SQL. Create a `recruiter_bot` database (or set `DB_URL`), configure `DB_USERNAME` and `DB_PASSWORD`, then run `mvn spring-boot:run` from `backend/`. The API seeds its fictional candidates and jobs on startup. Run the separate SQL challenge using `backend/sql_detective.sql`.
+- [Section C: Trip Splitter](frontend/README.md) — Vite, React, Redux Toolkit, React Router and strict TypeScript. From `frontend/`, run `npm install` then `npm run dev`.
 
 ## Design notes
 
