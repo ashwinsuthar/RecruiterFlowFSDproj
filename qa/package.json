@@ -1,0 +1,6 @@
+{
+  "name": "recruiterflow-qa-assignment",
+  "private": true,
+  "scripts": { "test": "playwright test", "test:ui": "playwright test tests/ui", "test:api": "playwright test tests/api" },
+  "devDependencies": { "@playwright/test": "^1.55.0", "@types/node": "^22.0.0", "typescript": "^5.7.0" }
+}

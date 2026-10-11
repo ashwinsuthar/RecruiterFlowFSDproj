@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS candidates (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(120) NOT NULL UNIQUE,
+  experience_years INT NOT NULL, availability VARCHAR(50) NOT NULL, traits TEXT NOT NULL, quirk TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS candidate_skills (
+  candidate_id BIGINT NOT NULL, skill VARCHAR(100) NOT NULL,
+  PRIMARY KEY(candidate_id, skill), FOREIGN KEY(candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS jobs (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(160) NOT NULL UNIQUE,
+  min_experience INT NOT NULL, culture_keywords VARCHAR(500) NOT NULL, tagline TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS job_skills (
+  job_id BIGINT NOT NULL, skill VARCHAR(100) NOT NULL,
+  PRIMARY KEY(job_id, skill), FOREIGN KEY(job_id) REFERENCES jobs(id) ON DELETE CASCADE
+);
