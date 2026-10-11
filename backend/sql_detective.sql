@@ -33,13 +33,16 @@ JOIN interviews i ON i.job_posting_id = jp.id AND i.stage = 'Final'
 GROUP BY r.id, r.name HAVING COUNT(*) >= 3 ORDER BY r.id;
 
 -- Question 5 (bonus): successful Final placements by recruiter and department, retaining ties.
-WITH placement_counts AS (
-  SELECT jp.department, r.id AS recruiter_id, r.name AS recruiter_name,
-         COUNT(*) AS successful_placements
-  FROM interviews i JOIN job_postings jp ON jp.id = i.job_posting_id
-  JOIN recruiters r ON r.id = jp.recruiter_id
-  WHERE i.stage = 'Final' AND i.outcome = 'passed'
-  GROUP BY jp.department, r.id, r.name
+WITH department_recruiters AS (
+  SELECT DISTINCT jp.department, r.id AS recruiter_id, r.name AS recruiter_name
+  FROM job_postings jp JOIN recruiters r ON r.id = jp.recruiter_id
+), placement_counts AS (
+  SELECT dr.department, dr.recruiter_id, dr.recruiter_name,
+         COUNT(i.id) AS successful_placements
+  FROM department_recruiters dr
+  LEFT JOIN job_postings jp ON jp.department = dr.department AND jp.recruiter_id = dr.recruiter_id
+  LEFT JOIN interviews i ON i.job_posting_id = jp.id AND i.stage = 'Final' AND i.outcome = 'passed'
+  GROUP BY dr.department, dr.recruiter_id, dr.recruiter_name
 ), ranked AS (
   SELECT placement_counts.*,
          DENSE_RANK() OVER (PARTITION BY department ORDER BY successful_placements DESC) AS placement_rank

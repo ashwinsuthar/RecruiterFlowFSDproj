@@ -1,7 +1,13 @@
 import type { ExpenseFormValues, FormErrors, Member, ExpenseSplit } from './types';
 import { parseRupeesToPaise } from './money';
 
-export function validateExpense(values: ExpenseFormValues, members: Member[], today = new Date().toISOString().slice(0, 10)): FormErrors {
+export function localDateString(date: Date = new Date()): string {
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${date.getFullYear()}-${month}-${day}`;
+}
+
+export function validateExpense(values: ExpenseFormValues, members: Member[], today = localDateString()): FormErrors {
   const errors: FormErrors = {};
   const description = values.description.trim();
   if (!description) errors.description = 'Description is required';

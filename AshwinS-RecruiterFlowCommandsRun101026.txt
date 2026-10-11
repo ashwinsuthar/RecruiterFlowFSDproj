@@ -53,25 +53,6 @@ PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\ba
 2026-10-11T20:07:34.906+05:30  INFO 20964 --- [           main] c.r.bot.RecruiterBotApplication          : Started RecruiterBotApplication in 2.349 seconds (process running for 2.686)
 
 
-Part B-> Front End
-PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc> cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\frontend
-PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\frontend> npm install
-
-up to date, audited 279 packages in 2s
-
-66 packages are looking for funding
-  run `npm fund` for details
-
-3 vulnerabilities (1 moderate, 2 critical)
-
-
-  VITE v6.4.4  ready in 467 ms
-
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-  ➜  press h + enter to show help
-
-
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -386,19 +367,31 @@ PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\ba
 ______________________________________________________________________________________________________________________________________________
 
 Part A -QA
-cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa
-npm install
-npx playwright install chromium
-$env:REQRES_API_KEY = "YOUR_REQRES_API_KEY"
-npm test
-
 118.1 MiB [====================] 100% 0.0s
 Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to C:\Users\AshwinSuthar\AppData\Local\ms-playwright\chromium_headless_shell-1248
 Downloading Winldd (playwright winldd v1007) from https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip
 0.1 MiB [====================] 100% 0.0s
+Winldd (playwright winldd v1007) downloaded to C:\Users\AshwinSuthar\AppData\Local\ms-playwright\winldd-1007
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa> $env:REQRES_API_KEY = "YOUR_REQRES_API_KEY"
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa> npm test
+
+
+
+                                                                                > $env:REQRES_API_KEY = "free_user_3KYMOsB4bDXsBDDB3pKb90TiKki"
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa> npm test
+
+> test
+> playwright test
+> test
+> test
+> playwright test
 > test
 > playwright test
 
+
+Running 5 tests using 5 workers
+> test
+> playwright test
 
 Running 5 tests using 5 workers
 
@@ -409,4 +402,31 @@ Running 5 tests using 5 workers
   ok 5 [chromium] › tests\api\users.spec.ts:15:7 › ReqRes users API › creates Morpheus and returns the submitted name (475ms)
 
   5 passed (9.7s)
-PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa> 
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa>
+
+
+______________________________________________________________________________________________________________
+
+
+
+Part B-> Front End
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc> cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\frontend
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\frontend> npm install
+
+up to date, audited 279 packages in 2s
+
+66 packages are looking for funding
+  run `npm fund` for details
+
+3 vulnerabilities (1 moderate, 2 critical)
+
+
+  VITE v6.4.4  ready in 467 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+

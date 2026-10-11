@@ -39,12 +39,12 @@ public class RecruiterController {
         return ResponseEntity.created(URI.create("/jobs/" + id)).body(repository.job(id).orElseThrow());
     }
     @Operation(summary = "Rank candidates for a job", description = "Scores candidates using 70% required-skill coverage and 30% experience fit. Returns 404 when the job does not exist.")
-    @GetMapping("/jobs/{id}/matches") public ResponseEntity<List<MatchResult>> jobMatches(@PathVariable long id) {
+    @GetMapping("/jobs/{id}/matches") public ResponseEntity<List<MatchResult>> jobMatches(@PathVariable("id") long id) {
         if (repository.job(id).isEmpty()) return ResponseEntity.notFound().build();
         return ResponseEntity.ok(matchingService.candidatesForJob(id));
     }
     @Operation(summary = "Rank jobs for a candidate", description = "Returns jobs ranked for this candidate using skill coverage and experience fit. Returns 404 when the candidate does not exist.")
-    @GetMapping("/candidates/{id}/matches") public ResponseEntity<List<MatchResult>> candidateMatches(@PathVariable long id) {
+    @GetMapping("/candidates/{id}/matches") public ResponseEntity<List<MatchResult>> candidateMatches(@PathVariable("id") long id) {
         if (repository.candidate(id).isEmpty()) return ResponseEntity.notFound().build();
         return ResponseEntity.ok(matchingService.jobsForCandidate(id));
     }

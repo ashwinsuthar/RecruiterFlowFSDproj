@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { expenseAdded } from '../features/expenses/expensesSlice';
-import { buildSplit, validateExpense } from '../logic/validation';
+import { buildSplit, localDateString, validateExpense } from '../logic/validation';
 import { parseRupeesToPaise } from '../logic/money';
 import type { Category, ExpenseFormValues, FormErrors, SplitMode } from '../logic/types';
 
@@ -39,7 +39,7 @@ export function ExpenseForm(): ReactElement {
       <div className="form-grid">
         <label className="field full">Description<input value={values.description} maxLength={120} onChange={event => update('description', event.target.value)} aria-invalid={Boolean(errors.description)} aria-describedby={errors.description ? 'description-error' : undefined} placeholder="e.g. Dinner by the beach" />{errors.description && <span className="error" id="description-error">{errors.description}</span>}</label>
         <label className="field">Amount in ₹<input inputMode="decimal" value={values.amount} onChange={event => update('amount', event.target.value)} aria-invalid={Boolean(errors.amount)} aria-describedby={errors.amount ? 'amount-error' : undefined} placeholder="0.00" />{errors.amount && <span className="error" id="amount-error">{errors.amount}</span>}</label>
-        <label className="field">Date<input type="date" value={values.date} max={new Date().toISOString().slice(0, 10)} onChange={event => update('date', event.target.value)} aria-invalid={Boolean(errors.date)} />{errors.date && <span className="error">{errors.date}</span>}</label>
+        <label className="field">Date<input type="date" value={values.date} max={localDateString()} onChange={event => update('date', event.target.value)} aria-invalid={Boolean(errors.date)} />{errors.date && <span className="error">{errors.date}</span>}</label>
         <label className="field">Paid by<select value={values.paidBy} onChange={event => update('paidBy', event.target.value)} aria-invalid={Boolean(errors.paidBy)}><option value="">Choose a person</option>{members.map(member => <option key={member.id} value={member.id}>{member.name}</option>)}</select>{errors.paidBy && <span className="error">{errors.paidBy}</span>}</label>
         <label className="field">Category<select value={values.category} onChange={event => update('category', event.target.value)} aria-invalid={Boolean(errors.category)}><option value="">Choose a category</option>{categories.map(category => <option key={category}>{category}</option>)}</select>{errors.category && <span className="error">{errors.category}</span>}</label>
       </div>
