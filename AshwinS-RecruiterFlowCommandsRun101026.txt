@@ -72,8 +72,318 @@ up to date, audited 279 packages in 2s
   ➜  press h + enter to show help
 
 
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc> cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> $env:DB_USERNAME = "root"
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> $env:DB_PASSWORD = "YOUR_MYSQL_PASSWORD"
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.recruiterflow:recruiter-bot >-------------------
+[INFO] Building recruiter-bot 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ recruiter-bot >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ recruiter-bot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recruiter-bot ---
+[INFO] skip non existing resourceDirectory F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\src\test\resources
+[INFO]                                                                                 mvn spring-boot:run              
+[INFO] Scanning for projects...ruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> $env:DB_PASSWORD = "Ashwins@1191"
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] ------------------< com.recruiterflow:recruiter-bot >-------------------
+[INFO] Building recruiter-bot 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] --- spring-boot:3.4.4:run (default-cli) @ recruiter-bot ---
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ recruiter-bot >>>
+[INFO] IITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> mvn spring-boot:run
+[INFO] --- resources:3.3.1:resources (default-resources) @ recruiter-bot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recruiter-bot ---
+2026-10-11T20:07:33.956+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:07:33.972+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:07:33.973+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:07:34.023+05:30  INFO 20964 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-11T20:07:34.024+05:30  INFO 20964 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 983 ms       
+2026-10-11T20:07:34.126+05:30  INFO 20964 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-11T20:07:33.956+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:07:33.972+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:07:33.973+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:07:34.023+05:30  INFO 20964 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-11T20:07:33.956+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:07:33.972+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:07:33.973+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:07:33.956+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:07:33.972+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:07:33.956+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:07:33.956+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:07:33.972+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:07:33.973+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:07:34.023+05:30  INFO 20964 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-11T20:07:34.024+05:30  INFO 20964 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 983 ms       
+2026-10-11T20:07:34.126+05:30  INFO 20964 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-11T20:07:34.313+05:30  INFO 20964 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c269425
+2026-10-11T20:07:34.315+05:30  INFO 20964 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-11T20:07:34.898+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-11T20:07:34.906+05:30  INFO 20964 --- [           main] c.r.bot.RecruiterBotApplication          : Started RecruiterBotApplication in 2.349 seconds (process running for 2.686)
+2026-10-11T20:33:17.447+05:30  INFO 20964 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-11T20:33:17.448+05:30  INFO 20964 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-11T20:33:17.449+05:30  INFO 20964 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-11T20:33:38.970+05:30  INFO 20964 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-11T20:33:38.978+05:30  INFO 20964 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-11T20:33:38.982+05:30  INFO 20964 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-11T20:33:38.989+05:30  INFO 20964 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26:08 min
+[INFO] Finished at: 2026-10-11T20:33:39+05:30
+[INFO] ------------------------------------------------------------------------
+Terminate batch job (Y/N)? n
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.recruiterflow:recruiter-bot >-------------------
+[INFO] Building recruiter-bot 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ recruiter-bot >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ recruiter-bot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recruiter-bot ---
+[INFO] skip non existing resourceDirectory F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] <<< spring-boot:3.4.4:run (default-cli) < test-compile @ recruiter-bot <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot:3.4.4:run (default-cli) @ recruiter-bot ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2026-10-11T20:33:53.451+05:30  INFO 22508 --- [           main] c.r.bot.RecruiterBotApplication          : Starting RecruiterBotApplication using Java 24 with PID 22508 (F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\target\classes started by AshwinSuthar in F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend)
+2026-10-11T20:33:53.454+05:30  INFO 22508 --- [           main] c.r.bot.RecruiterBotApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-10-11T20:33:54.667+05:30  INFO 22508 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:33:54.683+05:30  INFO 22508 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:33:54.684+05:30  INFO 22508 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:33:54.744+05:30  INFO 22508 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-11T20:33:54.745+05:30  INFO 22508 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1241 ms
+2026-10-11T20:33:54.869+05:30  INFO 22508 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-11T20:33:55.077+05:30  INFO 22508 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@da28d03
+2026-10-11T20:33:55.080+05:30  INFO 22508 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-11T20:33:55.441+05:30  WARN 22508 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'resourceHandlerMapping' threw exception with message: No more pattern data allowed after {*...} or ** pattern element
+2026-10-11T20:33:55.443+05:30  INFO 22508 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-11T20:33:55.462+05:30  INFO 22508 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-11T20:33:55.465+05:30  INFO 22508 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-11T20:33:55.476+05:30  INFO 22508 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-11T20:33:55.491+05:30 ERROR 22508 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid mapping pattern detected:
+/swagger-ui/**/*index.html
+           ^
+No more pattern data allowed after {*...} or ** pattern element
+
+Action:
+
+Fix this pattern in your application or switch to the legacy parser implementation with 'spring.mvc.pathmatch.matching-strategy=ant_path_matcher'.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.965 s
+[INFO] Finished at: 2026-10-11T20:33:55+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.4:run (default-cli) on project recruiter-bot: Process terminated with exit code: 1 -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.recruiterflow:recruiter-bot >-------------------
+[INFO] Building recruiter-bot 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ recruiter-bot >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ recruiter-bot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recruiter-bot ---
+[INFO] skip non existing resourceDirectory F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] <<< spring-boot:3.4.4:run (default-cli) < test-compile @ recruiter-bot <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot:3.4.4:run (default-cli) @ recruiter-bot ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2026-10-11T20:35:19.745+05:30  INFO 21044 --- [           main] c.r.bot.RecruiterBotApplication          : Starting RecruiterBotApplication using Java 24 with PID 21044 (F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\target\classes started by AshwinSuthar in F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend)
+2026-10-11T20:35:19.748+05:30  INFO 21044 --- [           main] c.r.bot.RecruiterBotApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-10-11T20:35:20.902+05:30  INFO 21044 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:35:20.918+05:30  INFO 21044 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:35:20.919+05:30  INFO 21044 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:35:20.975+05:30  INFO 21044 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-11T20:35:20.976+05:30  INFO 21044 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1179 ms
+2026-10-11T20:35:21.078+05:30  INFO 21044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-11T20:35:21.272+05:30  INFO 21044 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@da28d03
+2026-10-11T20:35:21.274+05:30  INFO 21044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-11T20:35:21.636+05:30  WARN 21044 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'resourceHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'resourceHandlerMapping' threw exception with message: No more pattern data allowed after {*...} or ** pattern element
+2026-10-11T20:35:21.637+05:30  INFO 21044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-11T20:35:21.663+05:30  INFO 21044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-11T20:35:21.666+05:30  INFO 21044 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-11T20:35:21.678+05:30  INFO 21044 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-11T20:35:21.694+05:30 ERROR 21044 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid mapping pattern detected:
+/swagger-ui/**/*index.html
+           ^
+No more pattern data allowed after {*...} or ** pattern element
+
+Action:
+
+Fix this pattern in your application or switch to the legacy parser implementation with 'spring.mvc.pathmatch.matching-strategy=ant_path_matcher'.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.828 s
+[INFO] Finished at: 2026-10-11T20:35:21+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.4:run (default-cli) on project recruiter-bot: Process terminated with exit code: 1 -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> mvn clean spring-boot:run
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.recruiterflow:recruiter-bot >-------------------
+[INFO] Building recruiter-bot 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ recruiter-bot ---
+[INFO] Deleting F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\target
+[INFO] 
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ recruiter-bot >>>
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ recruiter-bot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recruiter-bot ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recruiter-bot ---
+[INFO] skip non existing resourceDirectory F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\src\test\resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ recruiter-bot ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO]
+[INFO] <<< spring-boot:3.4.4:run (default-cli) < test-compile @ recruiter-bot <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot:3.4.4:run (default-cli) @ recruiter-bot ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2026-10-11T20:37:14.653+05:30  INFO 19164 --- [           main] c.r.bot.RecruiterBotApplication          : Starting RecruiterBotApplication using Java 24 with PID 19164 (F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\target\classes started by AshwinSuthar in F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend)
+2026-10-11T20:37:14.657+05:30  INFO 19164 --- [           main] c.r.bot.RecruiterBotApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-10-11T20:37:15.810+05:30  INFO 19164 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:37:15.825+05:30  INFO 19164 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:37:15.826+05:30  INFO 19164 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:37:15.885+05:30  INFO 19164 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-11T20:37:15.886+05:30  INFO 19164 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1178 ms
+2026-10-11T20:37:15.991+05:30  INFO 19164 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-11T20:37:16.188+05:30  INFO 19164 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fb04a72
+2026-10-11T20:37:16.191+05:30  INFO 19164 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-11T20:37:16.778+05:30  INFO 19164 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-11T20:37:16.787+05:30  INFO 19164 --- [           main] c.r.bot.RecruiterBotApplication          : Started RecruiterBotApplication in 2.568 seconds (process running for 2.912)
 
 
+
+
+______________________________________________________________________________________________________________________________________________
 
 Part A -QA
 cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa
