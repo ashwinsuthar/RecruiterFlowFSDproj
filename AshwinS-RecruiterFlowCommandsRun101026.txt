@@ -1,0 +1,102 @@
+AshwinSuthar RecruiterFlowCode Running Commands-101026->
+
+Running PartB Backend->
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc> cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> $env:DB_USERNAME = "root"
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> $env:DB_PASSWORD = "YOUR_MYSQL_PASSWORD"
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.recruiterflow:recruiter-bot >-------------------
+[INFO] Building recruiter-bot 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ recruiter-bot >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ recruiter-bot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recruiter-bot ---
+[INFO] skip non existing resourceDirectory F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend\src\test\resources
+[INFO]                                                                                 mvn spring-boot:run              
+[INFO] Scanning for projects...ruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> $env:DB_PASSWORD = "Ashwins@1191"
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] ------------------< com.recruiterflow:recruiter-bot >-------------------
+[INFO] Building recruiter-bot 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] --- spring-boot:3.4.4:run (default-cli) @ recruiter-bot ---
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ recruiter-bot >>>
+[INFO] IITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\backend> mvn spring-boot:run
+[INFO] --- resources:3.3.1:resources (default-resources) @ recruiter-bot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recruiter-bot ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recruiter-bot ---
+2026-10-11T20:07:33.956+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-11T20:07:33.972+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T20:07:33.973+05:30  INFO 20964 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2026-10-11T20:07:34.023+05:30  INFO 20964 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-11T20:07:34.024+05:30  INFO 20964 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 983 ms       
+2026-10-11T20:07:34.126+05:30  INFO 20964 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-11T20:07:34.313+05:30  INFO 20964 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c269425
+2026-10-11T20:07:34.315+05:30  INFO 20964 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-11T20:07:34.898+05:30  INFO 20964 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-11T20:07:34.906+05:30  INFO 20964 --- [           main] c.r.bot.RecruiterBotApplication          : Started RecruiterBotApplication in 2.349 seconds (process running for 2.686)
+
+
+Part B-> Front End
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc> cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\frontend
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\frontend> npm install
+
+up to date, audited 279 packages in 2s
+
+66 packages are looking for funding
+  run `npm fund` for details
+
+3 vulnerabilities (1 moderate, 2 critical)
+
+
+  VITE v6.4.4  ready in 467 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+
+
+
+
+Part A -QA
+cd F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa
+npm install
+npx playwright install chromium
+$env:REQRES_API_KEY = "YOUR_REQRES_API_KEY"
+npm test
+
+118.1 MiB [====================] 100% 0.0s
+Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to C:\Users\AshwinSuthar\AppData\Local\ms-playwright\chromium_headless_shell-1248
+Downloading Winldd (playwright winldd v1007) from https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip
+0.1 MiB [====================] 100% 0.0s
+> test
+> playwright test
+
+
+Running 5 tests using 5 workers
+
+  ok 1 [chromium] › tests\ui\cart.spec.ts:4:5 › adding one product updates the cart badge to one (8.2s)
+  ok 2 [chromium] › tests\api\users.spec.ts:8:7 › ReqRes users API › gets user 2 and returns an email (511ms)
+  ok 3 [chromium] › tests\ui\login.spec.ts:11:5 › locked out user sees the locked out error (8.1s)
+  ok 4 [chromium] › tests\ui\login.spec.ts:4:5 › standard user can log in and see Products (8.1s)
+  ok 5 [chromium] › tests\api\users.spec.ts:15:7 › ReqRes users API › creates Morpheus and returns the submitted name (475ms)
+
+  5 passed (9.7s)
+PS F:\IIITBPlacementJobData\RecruiterFlowFullStackDev111026\CgFullStackDevSrc\qa> 
