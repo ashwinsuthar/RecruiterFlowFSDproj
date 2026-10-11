@@ -10,7 +10,7 @@ The configured connection matches the supplied MySQL Workbench screenshot: `loca
 mvn spring-boot:run
 ```
 
-Endpoints: `GET /api/candidates`, `GET /api/jobs`, `POST /api/candidates`, `POST /api/jobs`, `GET /api/jobs/{id}/matches`, `GET /api/candidates/{id}/matches`. Create endpoints accept JSON matching the returned fields, including a `skills` or `requiredSkills` string array. The response from each match endpoint is ranked by descending score, then ascending ID, with an explanation. Example: `curl http://localhost:8080/api/jobs/1/matches`.
+Endpoints: `GET /candidates`, `GET /jobs`, `POST /candidates`, `POST /jobs`, `GET /jobs/{id}/matches`, `GET /candidates/{id}/matches`. Create endpoints accept JSON matching the returned fields, including a `skills` or `requiredSkills` string array. The response from each match endpoint is ranked by descending score, then ascending ID, with an explanation. Example: `curl http://localhost:8080/jobs/1/matches`.
 
 ## Matching choice
 

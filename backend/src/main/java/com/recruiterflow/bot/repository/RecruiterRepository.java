@@ -4,7 +4,7 @@ import com.recruiterflow.bot.dto.CandidateInput;
 import com.recruiterflow.bot.dto.JobInput;
 import com.recruiterflow.bot.model.Candidate;
 import com.recruiterflow.bot.model.Job;
-import com.recruiterflow.bot.model.MatchResult;
+import com.recruiterflow.bot.model.MatchFacts;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -61,40 +61,27 @@ public class RecruiterRepository {
         return new Job(j.id(), j.title(), skills, j.minExperience(), j.cultureKeywords(), j.tagline());
     }
 
-    public List<MatchResult> candidatesForJob(long jobId) {
+    public List<MatchFacts> candidateFactsForJob(long jobId) {
         String sql = "SELECT c.id, c.name, c.experience_years, j.min_experience, " +
                 "COUNT(DISTINCT js.skill) AS required_count, COUNT(DISTINCT cs.skill) AS overlap_count " +
                 "FROM jobs j CROSS JOIN candidates c LEFT JOIN job_skills js ON js.job_id=j.id " +
                 "LEFT JOIN candidate_skills cs ON cs.candidate_id=c.id AND cs.skill=js.skill " +
                 "WHERE j.id=? GROUP BY c.id,c.name,c.experience_years,j.min_experience ORDER BY c.id";
-        return jdbc.query(sql, (rs, n) -> {
-            int required = rs.getInt("required_count"), overlap = rs.getInt("overlap_count");
-            int exp = rs.getInt("experience_years"), min = rs.getInt("min_experience");
-            double skills = required == 0 ? 0 : (double) overlap / required;
-            double expFit = min == 0 || exp >= min ? 1 : (double) exp / min;
-            String reason = overlap + " of " + required + " required skills match; " + exp +
-                    " years experience against " + min + " required.";
-            return new MatchResult(rs.getLong("id"), rs.getString("name"), round((skills * .7 + expFit * .3) * 100), reason);
-        }, jobId).stream().sorted((a, b) -> { int score = Double.compare(b.score(), a.score()); return score == 0 ? Long.compare(a.id(), b.id()) : score; }).toList();
+        return jdbc.query(sql, (rs, n) -> new MatchFacts(rs.getLong("id"), rs.getString("name"),
+                rs.getInt("experience_years"), rs.getInt("min_experience"),
+                rs.getInt("required_count"), rs.getInt("overlap_count")), jobId);
     }
 
-    public List<MatchResult> jobsForCandidate(long candidateId) {
+    public List<MatchFacts> jobFactsForCandidate(long candidateId) {
         String sql = "SELECT j.id, j.title, c.experience_years, j.min_experience, " +
                 "COUNT(DISTINCT js.skill) AS required_count, COUNT(DISTINCT cs.skill) AS overlap_count " +
                 "FROM candidates c CROSS JOIN jobs j LEFT JOIN job_skills js ON js.job_id=j.id " +
                 "LEFT JOIN candidate_skills cs ON cs.candidate_id=c.id AND cs.skill=js.skill " +
                 "WHERE c.id=? GROUP BY j.id,j.title,c.experience_years,j.min_experience ORDER BY j.id";
-        return jdbc.query(sql, (rs, n) -> {
-            int required = rs.getInt("required_count"), overlap = rs.getInt("overlap_count");
-            int exp = rs.getInt("experience_years"), min = rs.getInt("min_experience");
-            double skills = required == 0 ? 0 : (double) overlap / required;
-            double expFit = min == 0 || exp >= min ? 1 : (double) exp / min;
-            String reason = overlap + " of " + required + " required skills match; " + exp +
-                    " years experience against " + min + " required.";
-            return new MatchResult(rs.getLong("id"), rs.getString("title"), round((skills * .7 + expFit * .3) * 100), reason);
-        }, candidateId).stream().sorted((a, b) -> { int score = Double.compare(b.score(), a.score()); return score == 0 ? Long.compare(a.id(), b.id()) : score; }).toList();
+        return jdbc.query(sql, (rs, n) -> new MatchFacts(rs.getLong("id"), rs.getString("title"),
+                rs.getInt("experience_years"), rs.getInt("min_experience"),
+                rs.getInt("required_count"), rs.getInt("overlap_count")), candidateId);
     }
-    private static double round(double n) { return Math.round(n * 100.0) / 100.0; }
 
     @Transactional
     public void seedIfEmpty() {
