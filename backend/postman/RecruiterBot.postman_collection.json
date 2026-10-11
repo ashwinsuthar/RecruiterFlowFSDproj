@@ -1,0 +1,67 @@
+{
+  "info": {
+    "_postman_id": "71c6c5ea-7900-43f1-9d39-4f254f27dbe2",
+    "name": "Recruiter Bot API",
+    "description": "Section B Recruiter Bot endpoints. Set baseUrl to http://localhost:8080. Create requests store the returned IDs for the matching requests. The backend must be running and connected to MySQL.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "jobId", "value": "1" },
+    { "key": "candidateId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Candidates",
+      "item": [
+        {
+          "name": "List candidates",
+          "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/candidates", "description": "Returns every candidate with skills." },
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('returns 200 and an array', function () {", "  pm.response.to.have.status(200);", "  pm.expect(pm.response.json()).to.be.an('array');", "});"] } }]
+        },
+        {
+          "name": "Create candidate",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Ada Lovelace Demo\",\n  \"skills\": [\"systems-design\", \"research\"],\n  \"experienceYears\": 5,\n  \"availability\": \"Immediate\",\n  \"traits\": \"analytical, curious\",\n  \"quirk\": \"Documents every experiment.\"\n}", "options": { "raw": { "language": "json" } } },
+            "url": "{{baseUrl}}/candidates",
+            "description": "Creates a candidate and stores its ID in the collection variable candidateId. Use a unique name on repeated runs."
+          },
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('creates candidate', function () {", "  pm.response.to.have.status(201);", "  const candidate = pm.response.json();", "  pm.expect(candidate.id).to.be.a('number');", "  pm.collectionVariables.set('candidateId', candidate.id);", "});"] } }]
+        },
+        {
+          "name": "Rank jobs for candidate",
+          "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/candidates/{{candidateId}}/matches", "description": "Returns jobs in descending match score with a short explanation. Set candidateId or run Create candidate first." },
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('returns ranked jobs', function () {", "  pm.response.to.have.status(200);", "  const results = pm.response.json();", "  pm.expect(results).to.be.an('array');", "  if (results.length > 0) {", "    pm.expect(results[0]).to.have.property('score');", "    pm.expect(results[0]).to.have.property('reason');", "  }", "});"] } }]
+        }
+      ]
+    },
+    {
+      "name": "Jobs",
+      "item": [
+        {
+          "name": "List jobs",
+          "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/jobs", "description": "Returns every job and required skills." },
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('returns 200 and an array', function () {", "  pm.response.to.have.status(200);", "  pm.expect(pm.response.json()).to.be.an('array');", "});"] } }]
+        },
+        {
+          "name": "Create job",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"title\": \"Platform Engineer Demo\",\n  \"requiredSkills\": [\"systems-design\", \"research\"],\n  \"minExperience\": 3,\n  \"cultureKeywords\": \"analytical, collaborative\",\n  \"tagline\": \"Build dependable systems.\"\n}", "options": { "raw": { "language": "json" } } },
+            "url": "{{baseUrl}}/jobs",
+            "description": "Creates a job and stores its ID in the collection variable jobId. Use a unique title on repeated runs."
+          },
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('creates job', function () {", "  pm.response.to.have.status(201);", "  const job = pm.response.json();", "  pm.expect(job.id).to.be.a('number');", "  pm.collectionVariables.set('jobId', job.id);", "});"] } }]
+        },
+        {
+          "name": "Rank candidates for job",
+          "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/jobs/{{jobId}}/matches", "description": "Returns candidates in descending match score with a short explanation. Set jobId or run Create job first." },
+          "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('returns ranked candidates', function () {", "  pm.response.to.have.status(200);", "  const results = pm.response.json();", "  pm.expect(results).to.be.an('array');", "  if (results.length > 0) {", "    pm.expect(results[0]).to.have.property('score');", "    pm.expect(results[0]).to.have.property('reason');", "  }", "});"] } }]
+        }
+      ]
+    }
+  ]
+}
