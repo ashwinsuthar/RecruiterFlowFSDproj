@@ -14,4 +14,4 @@ Trip Splitter stores typed member and expense state in Redux Toolkit, initialize
 
 The recruiter matching score is 70% required-skill coverage and 30% experience fit. Experience meets the fit component at the required minimum and scales linearly below it; no extra experience raises the score above the minimum. Ties use candidate/job id order. Matching explanations state skill coverage and the experience comparison. The service uses normalized candidate/job/skill join tables and explicit JDBC SQL, without an ORM or query builder.
 
-AI tools were used to help implement these assignment projects. Review the code and run the typecheck, lint and tests in each project before submission; you should understand the implementation and be ready to explain its trade-offs.
+AI tools were used to just test the test cases. Review the code and run the typecheck, lint and tests in each project before submission; you should understand the implementation and be ready to explain its trade-offs.

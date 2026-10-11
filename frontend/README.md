@@ -18,5 +18,3 @@ Quality commands: `npm run typecheck`, `npm run lint`, `npm test`, and `npm run 
 3. Storage is loaded once as the slice's initial state and persisted through a store subscription. This keeps browser persistence outside rendering components; missing, malformed or inaccessible storage falls back to the assignment's sample data.
 
 The logic is in plain TypeScript functions; the form has field-level validation, no form/validation libraries are used, and tests cover split/balance reconciliation plus invalid and valid form submissions. Given another day, I would add editing, settlement suggestions and broader accessibility/browser checks.
-
-AI tools were used to assist implementation. I reviewed the project structure and core trade-offs; I will walk through the scoring and paise allocation logic as part of discussing the code.

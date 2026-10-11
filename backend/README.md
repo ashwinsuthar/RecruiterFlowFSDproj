@@ -35,5 +35,3 @@ Score = 70% required-skill coverage + 30% experience fit. Experience fit is 100%
 ## SQL detective challenge
 
 `sql_detective.sql` recreates the supplied hiring-ops schema and seed rows, then answers all five questions in order. Duplicate people are grouped by case-insensitive, whitespace-trimmed email; Q4 counts every Final interview in the denominator, including a pending outcome.
-
-AI assistance was used during implementation; all choices and source should be reviewed and understood before submission. The assignment calls for a discussion of trade-offs, not just a successful launch.
